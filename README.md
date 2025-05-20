@@ -43,3 +43,19 @@
 ├── 
 ├── 
 └── sql/ # Script de la base de datos
+
+
+## 🚀 Futuras mejoras
+
+- Validación de compatibilidad entre piezas
+- Constructor visual del teclado
+- Pasarela de pago real (Stripe, PayPal)
+- Internacionalización (multi-idioma)
+- Dashboard avanzado de administración con estadísticas
+
+## 📄 Licencia
+
+Este proyecto es de uso académico y personal. No está autorizado su uso comercial sin el consentimiento del autor.
+
+---
+
