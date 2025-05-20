@@ -1,0 +1,125 @@
+.footer-info {
+  background-color: #fef7e8;
+  padding: 60px 20px 40px;
+  font-size: 14px;
+  color: #111;
+}
+
+.shipping-bar.scroll-loop {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.scroll-track {
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+  width: max-content;
+}
+
+.scroll-content {
+  padding-right: 60px;
+}
+  
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.eu-banner {
+  max-width: 100%;
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.eu-banner img {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  border-radius: 12px; /* 🎯 Aquí se redondean las esquinas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Opcional: un poco de sombra para estilo */
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre cada bloque */
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-col label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer-columns {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-col h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-col ul li a,
+.footer-col p a {
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-col select {
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #111;
+}
+
+.payments img {
+  width: 160px;
+  margin: 10px 0;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 40px;
+  color: #444;
+}
+
+.footer-copy a {
+  color: #333;
+  text-decoration: underline;
+}
+

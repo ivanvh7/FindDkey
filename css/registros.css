@@ -1,0 +1,85 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* Video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+/* Contenedor centrado */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Títulos */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: rgba(126, 45, 57, 0.75);
+}
+
+/* Inputs */
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Botón */
+.login-container button {
+    background-color: #833a45;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: rgba(126, 45, 57, 0.75);
+}
+
+/* Texto adicional */
+.login-container p {
+    margin-top: 1rem;
+}
+
+.login-container a {
+    color: rgba(126, 45, 57, 0.75);
+    text-decoration: none;
+}

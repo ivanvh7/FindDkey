@@ -1,0 +1,63 @@
+.header {
+  background-color: transparent; /* Color crema */
+  padding: 80px 40px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 120px;
+  transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(126, 45, 57, 0.75); /* O el color que prefieras al hacer scroll */
+  padding: 12px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo-img {
+    height: 320px; /* ajusta según necesites */
+    width: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 80px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff8e7;
+    font-size: 14px;
+}
+
+.productos {
+    padding: 40px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.promo-bar {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 0;
+}

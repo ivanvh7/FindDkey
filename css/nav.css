@@ -1,0 +1,185 @@
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-item > a {
+  font-size: 24px;        /* Tamaño más grande */
+  font-weight: 500;       /* Un poco más de grosor */
+  color: #fff;         /* Color de texto */
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item:hover .mega-menu {
+    display: flex;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto; /* o 100%, máx. 1200px según tu container */
+    background-color: #fff8e7;
+    padding: 30px 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    gap: 60px;
+    justify-content: start;
+}
+
+.mega-menu .column {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff8e7;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    min-width: 160px;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0e8d5;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Estilo para todos los enlaces dentro de dropdowns y mega menus */
+.dropdown-menu a,
+.mega-menu a {
+    color: #222; /* negro o gris oscuro */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.mega-menu a:hover {
+    background-color: #f0e8d5;
+}
+
+
+
+/* Contenedor de los botones de iconos */
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Botón que contiene cada SVG */
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo de los SVG dentro del botón */
+.icon-button svg {
+  width: 32px;
+  height: 32px;
+  stroke: white;           /* Color del contorno */
+  stroke-width: 1.5;
+  fill: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Efecto al pasar el ratón */
+.icon-button:hover svg {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+
+/* ===== Buscador expandido ===== */
+.search-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a1a; /* Fondo oscuro para contraste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  z-index: 999;
+}
+
+.search-full input {
+  width: 100%;
+  max-width: 700px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  border: 2px solid white;
+  border-radius: 999px;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.search-full input::placeholder {
+  color: #ccc;
+}
+
+.search-icon,
+.close-search {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===== Oculta elementos del header cuando se muestra el buscador ===== */
+.header.hide-elements .logo,
+.header.hide-elements .nav,
+.header.hide-elements .nav-icons {
+  display: none !important;
+}
+
+/* ===== Utilidad ===== */
+.hidden {
+  display: none !important;
+}

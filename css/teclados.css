@@ -1,0 +1,318 @@
+/* ===== GENERAL ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  background-color: #fff8e7;
+  color: #111;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  margin-left: 30px;
+  color: #833a45;
+}
+
+.header {
+  background-color: rgba(126, 45, 57, 0.85);
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 120px; /* Reducido de 120px a 80px */
+  transition: background-color 0.3s ease;
+}
+
+.header.transparent {
+  background-color: rgba(126, 45, 57, 0);
+  backdrop-filter: blur(8px);
+}
+
+.logo-img {
+  height: 340px; /* antes 80px */
+  width: auto;
+  display: block;
+}
+
+.container {
+  padding: 0 40px;
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; /* ¡Muy importante! Hace que no crezca innecesariamente */
+}
+
+
+
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-item > a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:hover .mega-menu {
+  display: flex;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff8e7;
+  padding: 30px 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  gap: 60px;
+  justify-content: start;
+}
+
+.mega-menu .column {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.mega-menu a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.mega-menu a:hover {
+  background-color: #f0e8d5;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff8e7;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    min-width: 160px;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0e8d5;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Estilo para todos los enlaces dentro de dropdowns y mega menus */
+.dropdown-menu a,
+.mega-menu a {
+    color: #222; /* negro o gris oscuro */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.mega-menu a:hover {
+    background-color: #f0e8d5;
+}
+
+
+/* ===== FORMULARIO DE FILTRO ===== */
+.filtro-form {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  background-color: #fffaf3; /* o transparente si quieres un fondo uniforme */
+  border-bottom: 1px solid #ddd;
+  margin-left: 10px;
+  justify-content: flex-start; /* importante para alinearlo a la izquierda */
+}
+
+.filtro-form select {
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  max-height: 36px;
+}
+
+.filtro-form button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+/* ===== PRODUCTOS ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem 6rem; /* espacio vertical y horizontal */
+  padding: 2rem 6%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.product-card {
+  background-color: #fff8;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  height: 360px;
+  width: 560px;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  margin: 0.25rem 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #fff3df;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-col h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 12px;
+  background-color: #fff1d6;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.payments img {
+  max-width: 100%;
+  height: 120px;
+  margin: 10px 0;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #333;
+  margin: 20px 30px 0;
+}
+
+.breadcrumb a {
+  color: #222;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #666;
+}

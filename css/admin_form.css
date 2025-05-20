@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    padding: 40px;
+    color: #2c3e50;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #34495e;
+    text-align: center;
+}
+
+/* Sección de cada bloque */
+.section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezado de sección */
+.section h2 {
+    margin-bottom: 20px;
+    color: #2d3436;
+    border-left: 6px solid #3498db;
+    padding-left: 12px;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 12px 10px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Formularios */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fafafa;
+    font-size: 14px;
+}
+
+form input[type="file"] {
+    padding: 8px;
+}
+
+form select {
+    background-color: #fff;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1f6391;
+}
+
+/* Botones secundarios */
+form button[name="accion"][value="eliminar"] {
+    background-color: #e74c3c;
+    margin-left: 10px;
+}
+
+form button[name="accion"][value="eliminar"]:hover {
+    background-color: #c0392b;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.accordion-header:hover {
+    background-color: #555;
+}
+
+.accordion-content {
+    padding: 15px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+
+.accordion-section.open .accordion-content {
+    display: block;
+}
+
+
+/* Responsive (opcional) */
+@media screen and (max-width: 768px) {
+    table, form, .section {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}

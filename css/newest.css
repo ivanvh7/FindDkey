@@ -1,0 +1,120 @@
+/* CSS actualizado para tarjetas con ancho fijo independientemente de la imagen */
+
+.newest-additions {
+    padding: 60px 0;
+    background-color: #fff8e7;
+    text-align: center;
+}
+
+.newest-additions h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+.newest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fuerza siempre 3 columnas */
+    gap: 40px;
+    width: 90%; /* Usa un 90% del ancho de la pantalla */
+    max-width: 1500px; /* Opcional: ancho máximo */
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    background-color: #fff8e7;
+}
+
+.newest-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Para que ocupe todo el ancho de su celda */
+}
+
+
+
+.newest-card:hover {
+    transform: translateY(-4px);
+}
+
+.newest-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.newest-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.newest-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.newest-card .precio {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.newest-card .btn {
+    padding: 8px 16px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newest-card .btn:hover {
+    background-color: #333;
+}
+
+/* Media queries para tablets */
+@media (max-width: 900px) {
+    .newest-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .newest-additions h2 {
+        font-size: 28px;
+    }
+}
+
+/* Media queries para móviles */
+@media (max-width: 600px) {
+    .newest-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .newest-additions {
+        padding: 40px 0;
+    }
+
+    .newest-additions h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .newest-card {
+        padding: 15px;
+        min-height: auto;
+    }
+}
